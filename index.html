@@ -3,231 +3,53 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>🦷 미르치과 뉴스 데일리</title>
+  <title>🦷 치과 뉴스 데일리</title>
   <style>
     :root {
-      --blue-900: #0c2340;
-      --blue-800: #0f3460;
-      --blue-700: #1a4f8a;
-      --blue-600: #1e6bb8;
-      --blue-500: #2980d4;
-      --blue-400: #56a8e8;
-      --blue-300: #89c4f2;
-      --blue-100: #ddeeff;
-      --blue-50:  #f0f7ff;
-      --white: #ffffff;
-      --gray-100: #f4f6f9;
-      --gray-300: #cbd5e1;
-      --gray-500: #64748b;
-      --gray-700: #334155;
-      --green: #0e9f6e;
-      --purple: #7c3aed;
-      --orange: #d97706;
+      --blue-900: #0c2340; --blue-800: #0f3460; --blue-700: #1a4f8a;
+      --blue-600: #1e6bb8; --blue-500: #2980d4; --blue-400: #56a8e8;
+      --blue-300: #89c4f2; --blue-100: #ddeeff; --blue-50: #f0f7ff;
+      --white: #ffffff; --gray-100: #f4f6f9; --gray-300: #cbd5e1;
+      --gray-500: #64748b; --gray-700: #334155;
+      --green: #0e9f6e; --purple: #7c3aed; --orange: #d97706;
       --radius: 14px;
-      --shadow: 0 4px 20px rgba(12, 35, 64, 0.10);
-      --shadow-hover: 0 8px 32px rgba(12, 35, 64, 0.18);
+      --shadow: 0 4px 20px rgba(12,35,64,0.10);
+      --shadow-hover: 0 8px 32px rgba(12,35,64,0.18);
     }
-
     * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
-      background: var(--gray-100);
-      color: var(--gray-700);
-      line-height: 1.7;
-    }
-
-    /* ── HEADER ── */
-    header {
-      background: linear-gradient(135deg, var(--blue-900) 0%, var(--blue-700) 60%, var(--blue-500) 100%);
-      color: var(--white);
-      padding: 48px 24px 56px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-    header::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    }
-    header .logo {
-      font-size: 3rem;
-      margin-bottom: 8px;
-      display: block;
-    }
-    header h1 {
-      font-size: clamp(1.6rem, 5vw, 2.4rem);
-      font-weight: 800;
-      letter-spacing: -0.5px;
-      margin-bottom: 10px;
-    }
-    header .subtitle {
-      font-size: 0.95rem;
-      opacity: 0.8;
-      max-width: 480px;
-      margin: 0 auto 20px;
-    }
-    .date-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: rgba(255,255,255,0.15);
-      border: 1px solid rgba(255,255,255,0.3);
-      border-radius: 999px;
-      padding: 6px 18px;
-      font-size: 0.9rem;
-      font-weight: 600;
-      backdrop-filter: blur(4px);
-    }
-
-    /* ── MAIN LAYOUT ── */
-    main {
-      max-width: 1080px;
-      margin: 0 auto 48px;
-      padding: 32px 16px 0;
-    }
-
-    /* ── SECTION ── */
-    .section {
-      margin-bottom: 40px;
-    }
-    .section-header {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 20px;
-    }
-    .section-icon {
-      width: 44px;
-      height: 44px;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.3rem;
-      flex-shrink: 0;
-    }
+    body { font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--gray-100); color: var(--gray-700); line-height: 1.7; }
+    header { background: linear-gradient(135deg, var(--blue-900) 0%, var(--blue-700) 60%, var(--blue-500) 100%); color: var(--white); padding: 48px 24px 56px; text-align: center; position: relative; overflow: hidden; }
+    header .logo { font-size: 3rem; margin-bottom: 8px; display: block; }
+    header h1 { font-size: clamp(1.6rem, 5vw, 2.4rem); font-weight: 800; letter-spacing: -0.5px; margin-bottom: 10px; }
+    header .subtitle { font-size: 0.95rem; opacity: 0.8; max-width: 480px; margin: 0 auto 20px; }
+    .date-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); border-radius: 999px; padding: 6px 18px; font-size: 0.9rem; font-weight: 600; }
+    main { max-width: 1080px; margin: -32px auto 48px; padding: 0 16px; }
+    .section { margin-bottom: 40px; }
+    .section-header { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+    .section-icon { width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0; }
     .section-icon.blue   { background: var(--blue-600); }
     .section-icon.green  { background: var(--green); }
     .section-icon.purple { background: var(--purple); }
-    .section-title {
-      font-size: 1.25rem;
-      font-weight: 800;
-      color: var(--blue-900);
-    }
-    .section-count {
-      margin-left: auto;
-      font-size: 0.8rem;
-      color: var(--gray-500);
-      background: var(--gray-300);
-      border-radius: 999px;
-      padding: 2px 10px;
-      font-weight: 600;
-    }
-
-    /* ── CARD GRID ── */
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 18px;
-    }
-
-    /* ── CARD ── */
-    .card {
-      background: var(--white);
-      border-radius: var(--radius);
-      padding: 22px 22px 18px;
-      box-shadow: var(--shadow);
-      border: 1px solid rgba(200,220,240,0.5);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-    .card:hover {
-      transform: translateY(-3px);
-      box-shadow: var(--shadow-hover);
-    }
-
-    .card-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-      border-radius: 6px;
-      padding: 3px 8px;
-      align-self: flex-start;
-    }
+    .section-icon.orange { background: var(--orange); }
+    .section-title { font-size: 1.25rem; font-weight: 800; color: var(--blue-900); }
+    .section-count { margin-left: auto; font-size: 0.8rem; color: var(--gray-500); background: var(--gray-300); border-radius: 999px; padding: 2px 10px; font-weight: 600; }
+    .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 18px; }
+    .card { background: var(--white); border-radius: var(--radius); padding: 22px 22px 18px; box-shadow: var(--shadow); border: 1px solid rgba(200,220,240,0.5); transition: transform 0.2s, box-shadow 0.2s; display: flex; flex-direction: column; gap: 12px; }
+    .card:hover { transform: translateY(-3px); box-shadow: var(--shadow-hover); }
+    .card-tag { display: inline-flex; align-items: center; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; border-radius: 6px; padding: 3px 8px; align-self: flex-start; }
     .card-tag.blue   { background: var(--blue-100); color: var(--blue-700); }
     .card-tag.green  { background: #d1fae5; color: #065f46; }
     .card-tag.purple { background: #ede9fe; color: #5b21b6; }
-
-    .card-title {
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--blue-900);
-      line-height: 1.5;
-    }
-
-    .card-body {
-      font-size: 0.88rem;
-      color: var(--gray-500);
-      line-height: 1.7;
-      flex: 1;
-    }
-
-    .card-footer {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border-top: 1px solid var(--gray-100);
-      padding-top: 12px;
-      margin-top: 4px;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-    .source-label {
-      font-size: 0.78rem;
-      color: var(--gray-500);
-    }
-    .source-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      font-size: 0.78rem;
-      font-weight: 600;
-      color: var(--blue-600);
-      text-decoration: none;
-      border: 1px solid var(--blue-300);
-      border-radius: 6px;
-      padding: 4px 10px;
-      transition: background 0.15s, color 0.15s;
-    }
-    .source-link:hover {
-      background: var(--blue-600);
-      color: var(--white);
-      border-color: var(--blue-600);
-    }
-    .source-link svg {
-      width: 12px; height: 12px;
-      stroke: currentColor;
-    }
-
-    /* ── FOOTER ── */
-    footer {
-      text-align: center;
-      padding: 32px 16px 48px;
-      color: var(--gray-500);
-      font-size: 0.82rem;
-    }
+    .card-tag.orange { background: #fef3c7; color: #92400e; }
+    .card-title { font-size: 1rem; font-weight: 700; color: var(--blue-900); line-height: 1.5; }
+    .card-body  { font-size: 0.88rem; color: var(--gray-500); line-height: 1.7; flex: 1; }
+    .card-footer { display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--gray-100); padding-top: 12px; margin-top: 4px; flex-wrap: wrap; gap: 8px; }
+    .source-label { font-size: 0.78rem; color: var(--gray-500); }
+    .source-link { display: inline-flex; align-items: center; gap: 4px; font-size: 0.78rem; font-weight: 600; color: var(--blue-600); text-decoration: none; border: 1px solid var(--blue-300); border-radius: 6px; padding: 4px 10px; transition: background 0.15s, color 0.15s; }
+    .source-link:hover { background: var(--blue-600); color: var(--white); border-color: var(--blue-600); }
+    .source-link svg { width: 12px; height: 12px; stroke: currentColor; }
+    footer { text-align: center; padding: 32px 16px 48px; color: var(--gray-500); font-size: 0.82rem; }
     footer .tooth { font-size: 1.4rem; display: block; margin-bottom: 6px; }
-
-    /* ── MOBILE ── */
     @media (max-width: 600px) {
       header { padding: 36px 16px 48px; }
       header .logo { font-size: 2.4rem; }
@@ -237,175 +59,162 @@
   </style>
 </head>
 <body>
-
 <header>
   <span class="logo">🦷</span>
-  <h1>미르치과 뉴스 데일리</h1>
-  <p class="subtitle">매일 자동으로 업데이트되는 치과 업계 뉴스, 기술 트렌드, 건강보험 정책 모음</p>
-  <span class="date-badge">📅 2026년 04월 29일</span>
+  <h1>치과 뉴스 데일리</h1>
+  <p class="subtitle">매일 자동으로 업데이트되는 치과 업계 뉴스, 기술 트렌드, 건강보험 정책, SNS 마케팅 트렌드 모음</p>
+  <span class="date-badge">📅 2026년 04월 30일</span>
 </header>
-
 <main>
 
-  <!-- 치과 업계 뉴스 -->
   <section class="section">
     <div class="section-header">
       <div class="section-icon blue">🦷</div>
-      <h2 class="section-title">치과 업계 뉴스</h2>
+      <h2 class="section-title">🦷 치과 업계 뉴스</h2>
       <span class="section-count">3건</span>
     </div>
     <div class="card-grid">
-
       <article class="card">
         <span class="card-tag blue">업계 뉴스</span>
-        <h3 class="card-title">오라틱스 잇몸유산균, BMC Oral Health 국제 학술지 등재</h3>
-        <p class="card-body">구강유산균 전문기업 오라틱스의 'OraCMU®'가 구취 및 치주질환 원인균 개선 효과를 입증한 연구결과가 SCIE급 국제 학술지 BMC Oral Health에 등재됐다. 성인 80명 대상 8주 임상시험에서 휘발성 황화합물(VSCs) 수치가 위약군 대비 유의하게 감소하는 것이 확인됐다.</p>
+        <h3 class="card-title">SIDEX 2026 사전등록 개시, AI 주제 253개사 1,063부스 규모</h3>
+        <p class="card-body">서울시치과의사회가 5월 29~31일 코엑스에서 'The Future of Dentistry, Starts with AI'를 주제로 SIDEX 2026을 개최한다. 253개 업체 1,063부스 규모로 진행되며 AI 임상 강연 42개가 예정돼 있다.</p>
         <div class="card-footer">
           <span class="source-label">출처</span>
-          <a class="source-link" href="https://www.dentalnews.or.kr/news/article.html?no=47105" target="_blank" rel="noopener">
-            치과신문
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          </a>
+          <a class="source-link" href="https://www.dentalnews.or.kr/news/article.html?no=46934" target="_blank" rel="noopener">치과신문 <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
         </div>
       </article>
-
       <article class="card">
         <span class="card-tag blue">업계 뉴스</span>
-        <h3 class="card-title">2026 덴트포토 초이스 최종 결과 공개</h3>
-        <p class="card-body">치과의사 회원들이 직접 참여해 선정하는 '2026 덴트포토 초이스'의 최종 결과가 발표됐다. 시행 6년 차를 맞은 이 행사는 치과계 트렌드를 반영한 우수 제품과 도서를 알리는 지표로 자리매김하고 있다.</p>
+        <h3 class="card-title">치협·경기지부, IDEM 2026 싱가포르서 불법 진료 대응 주제 발표</h3>
+        <p class="card-body">치협과 경기지부가 4월 싱가포르 'IDEM 2026'에 참가해 한국 치과계의 불법 진료 문제와 대응 과제를 국제 무대에 알렸다. 해외 치과계와의 공동 대응 방안도 논의됐다.</p>
         <div class="card-footer">
           <span class="source-label">출처</span>
-          <a class="source-link" href="https://www.dailydental.co.kr/news/article.html?no=137493" target="_blank" rel="noopener">
-            치의신보
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          </a>
+          <a class="source-link" href="https://www.dailydental.co.kr/news/article.html?no=137357" target="_blank" rel="noopener">치의신보 <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
         </div>
       </article>
-
       <article class="card">
         <span class="card-tag blue">업계 뉴스</span>
-        <h3 class="card-title">SIDEX 2026 개막 예고, 'AI가 치과의 미래'</h3>
-        <p class="card-body">서울시치과의사회가 창립 101주년 기념 'SIDEX 2026' 개막을 예고했다. 'The Future of Dentistry, Starts with AI'를 주제로 코엑스에서 개최 예정이며, 64명의 연자가 42개 강연을 통해 AI 기반 최신 임상 지식을 전달할 계획이다.</p>
+        <h3 class="card-title">서울시치과의사회 회비면제연령 만 75세 이상으로 상향 조정</h3>
+        <p class="card-body">서울시치과의사회 대의원총회에서 회비면제연령을 현행 만 70세에서 만 75세 이상으로 상향하는 세칙개정안이 통과됐다. 고령 회원의 재정 부담 완화를 목적으로 한다.</p>
         <div class="card-footer">
           <span class="source-label">출처</span>
-          <a class="source-link" href="https://www.dentalarirang.com/news/articleView.html?idxno=47542" target="_blank" rel="noopener">
-            덴탈아리랑
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          </a>
+          <a class="source-link" href="https://www.dailydental.co.kr/" target="_blank" rel="noopener">치의신보 <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
         </div>
       </article>
-
     </div>
   </section>
-
-  <!-- 치과 기술 트렌드 -->
   <section class="section">
     <div class="section-header">
       <div class="section-icon green">💡</div>
-      <h2 class="section-title">치과 기술 트렌드</h2>
+      <h2 class="section-title">💡 치과 기술 트렌드</h2>
       <span class="section-count">3건</span>
     </div>
     <div class="card-grid">
-
       <article class="card">
         <span class="card-tag green">기술 트렌드</span>
-        <h3 class="card-title">AI 치과 진단 플랫폼 '파노', 3만 4천명 돌파</h3>
-        <p class="card-body">AI 기반 치과 진단 솔루션 DDH의 '파노'가 출시 17개월 만에 300개 이상의 치과병·의원에 도입되고 누적 AI 진단 환자 수 3만 4,000명을 넘어섰다. 파노는 다빈도 구강질환 탐지, 진단 크로스체크, 환자 상담 지원 등 진료 전반에서 활용도를 높이고 있다.</p>
+        <h3 class="card-title">SIDEX 2026 생성형 AI 세션 주목, 임상부터 경영까지 아우른다</h3>
+        <p class="card-body">SIDEX 2026에서 '생성형 AI' 주제 세션이 편성돼 AI 기반 임상 진료·치과 경영·교정 진단 변화 등 폭넓은 강연이 예정됐다. 박지만 서울치대 교수, 변수환 한림대성심병원 교수 등이 AI의 치과 임상 활용 방안을 발표한다.</p>
         <div class="card-footer">
           <span class="source-label">출처</span>
-          <a class="source-link" href="https://www.dentalarirang.com/news/articleView.html?idxno=47259" target="_blank" rel="noopener">
-            덴탈아리랑
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          </a>
+          <a class="source-link" href="https://dentin.kr/news/article.html?no=12750" target="_blank" rel="noopener">덴틴 <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
         </div>
       </article>
-
       <article class="card">
         <span class="card-tag green">기술 트렌드</span>
-        <h3 class="card-title">루트랩, WIS 2026서 'K-덴탈 플랫폼' 공개</h3>
-        <p class="card-body">루트랩이 '월드IT쇼(WIS) 2026'에서 환자·치과·기공소 간 분절된 업무를 하나로 연결하는 클라우드 기반 통합형 치과 시스템 'K-덴탈 플랫폼'을 공개했다. 대용량 의료·기공 이미지 처리 체계와 멀티테넌시 SaaS 구조를 통해 디지털 치과 생태계 확산을 목표로 한다.</p>
+        <h3 class="card-title">대한인공지능치의학회, AI 임상 적용 세미나 개최</h3>
+        <p class="card-body">대한인공지능치의학회가 '진료실에 찾아온 든든한 새 동료, AI' 주제로 세미나를 열고 치의학 AI 개발의 한계·기회와 임상 적용 사례를 공유했다. 데이터 품질 확보와 규제 환경 개선이 핵심 과제로 지목됐다.</p>
         <div class="card-footer">
           <span class="source-label">출처</span>
-          <a class="source-link" href="https://www.ddaily.co.kr/page/view/2026042816430435877" target="_blank" rel="noopener">
-            디지털데일리
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          </a>
+          <a class="source-link" href="https://www.dentalarirang.com/news/articleView.html?idxno=47376" target="_blank" rel="noopener">덴탈아리랑 <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
         </div>
       </article>
-
       <article class="card">
         <span class="card-tag green">기술 트렌드</span>
-        <h3 class="card-title">치아 재생 약, 임상 2상 진입…2030년 상용화 목표</h3>
-        <p class="card-body">일본 교토대·도레겜 바이오파마가 개발한 치아재생 약물 'USAG-1 항체'가 2026년 임상 2상에 진입했다. 선천적 무치증 어린이를 대상으로 효능을 입증할 계획이며, 성공 시 임플란트를 대체할 혁신적 치료법으로 주목받고 있다.</p>
+        <h3 class="card-title">오스템임플란트, 방콕 '월드미팅' 성료…디지털덴티스트리 선도 재확인</h3>
+        <p class="card-body">오스템임플란트가 태국 방콕에서 글로벌 월드미팅을 성료하며 디지털덴티스트리 선도 기업으로서의 입지를 재확인했다. 국제 파트너십 강화와 최신 디지털 임플란트 솔루션 소개가 이뤄졌다.</p>
         <div class="card-footer">
           <span class="source-label">출처</span>
-          <a class="source-link" href="https://biz-insight.co.kr/2030%EB%85%84-%EC%9E%84%ED%94%8C%EB%9E%80%ED%8A%B8-%EC%97%86%EB%8A%94-%EC%84%B8%EC%83%81-%EC%98%A8%EB%8B%A4-%EC%B9%98%EC%95%84%EC%9E%AC%EC%83%9D-%EC%95%BD-%EC%9E%84%EC%83%812%EC%83%81/" target="_blank" rel="noopener">
-            Biz-Insight
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          </a>
+          <a class="source-link" href="https://www.sedaily.com/article/20029374" target="_blank" rel="noopener">서울경제 <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
         </div>
       </article>
-
     </div>
   </section>
-
-  <!-- 건강보험 정책 -->
   <section class="section">
     <div class="section-header">
       <div class="section-icon purple">🏥</div>
-      <h2 class="section-title">건강보험 정책</h2>
+      <h2 class="section-title">🏥 건강보험 정책</h2>
       <span class="section-count">3건</span>
     </div>
     <div class="card-grid">
-
       <article class="card">
         <span class="card-tag purple">건강보험</span>
-        <h3 class="card-title">2026년 건강보험료율 7.19% 결정</h3>
-        <p class="card-body">보건복지부가 2026년도 건강보험료율을 7.19%로 결정했다. 이에 따라 직장가입자의 보험료 부담이 소폭 조정되며, 치과 포함 전반적인 의료비 지원 재원에 영향을 미칠 전망이다.</p>
+        <h3 class="card-title">2026년 치과 수가 인상, 점수당 단가 101.1원 적용</h3>
+        <p class="card-body">2026년부터 치과의원·치과병원의 건강보험 수가 점수당 단가가 101.1원으로 인상됐다. 스케일링·충치 치료 등 급여 항목의 환자 본인부담금이 소폭 조정된다.</p>
         <div class="card-footer">
           <span class="source-label">출처</span>
-          <a class="source-link" href="https://mohw.go.kr/board.es?act=view&bid=0027&list_no=1487279&mid=a10503010100&nPage=1&tag=" target="_blank" rel="noopener">
-            보건복지부
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          </a>
+          <a class="source-link" href="https://www.wegive.co.kr/wezine/detail/1365" target="_blank" rel="noopener">위기브 <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
         </div>
       </article>
-
       <article class="card">
         <span class="card-tag purple">건강보험</span>
-        <h3 class="card-title">65세 이상 임플란트 지르코니아 크라운 건강보험 적용</h3>
-        <p class="card-body">2025년 2월부터 만 65세 이상 부분 무치악 환자의 임플란트 보철 수복 시 지르코니아 크라운도 건강보험이 적용된다. 평생 2개까지 본인부담금 30%로 지원되어 약 38~40만 원 수준에 임플란트 시술을 받을 수 있다.</p>
+        <h3 class="card-title">만 19세 이상 연 1회 스케일링 건강보험 혜택 2026년도 유지</h3>
+        <p class="card-body">만 19세 이상 성인이면 누구나 연 1회 건강보험 적용 스케일링을 약 1만 6천 원에 받을 수 있으며, 2026년에도 이 혜택이 유지된다. 비보험 대비 약 4분의 1 수준의 비용으로 이용 가능하다.</p>
         <div class="card-footer">
           <span class="source-label">출처</span>
-          <a class="source-link" href="https://www.hira.or.kr/bbsDummy.do?pgmid=HIRAA020002000100&brdScnBltNo=4&brdBltNo=11827" target="_blank" rel="noopener">
-            건강보험심사평가원
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          </a>
+          <a class="source-link" href="https://moneypolicylab.com/2026/02/21/2026-dental-insurance-benefits-guide/" target="_blank" rel="noopener">Money Policy Lab <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
         </div>
       </article>
-
       <article class="card">
         <span class="card-tag purple">건강보험</span>
-        <h3 class="card-title">정량광형광기 치아우식증 검사 급여 확대</h3>
-        <p class="card-body">정량광형광기를 이용한 치아우식증 검사의 급여 대상이 기존 12세 이하에서 15세 이하로 확대됐으며, 검사 실시 간격도 6개월에서 3개월로 단축됐다. 어린이·청소년 충치 예방 관리가 더욱 강화될 전망이다.</p>
+        <h3 class="card-title">건강보험 요양급여비용 개정고시(보건복지부 고시 제2025-186호) 시행</h3>
+        <p class="card-body">보건복지부 고시 제2025-186호에 따른 건강보험 요양급여비용 개정이 시행되며 치과 분야 급여 항목별 수가가 조정됐다. 세부 내역은 건강보험심사평가원 및 각 지부 공지사항에서 확인할 수 있다.</p>
         <div class="card-footer">
           <span class="source-label">출처</span>
-          <a class="source-link" href="https://www.hira.or.kr/" target="_blank" rel="noopener">
-            건강보험심사평가원
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          </a>
+          <a class="source-link" href="https://gnda.imweb.me/24/?bmode=view&idx=168893634" target="_blank" rel="noopener">경상남도치과의사회 <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
         </div>
       </article>
-
     </div>
   </section>
-
+  <section class="section">
+    <div class="section-header">
+      <div class="section-icon orange">📣</div>
+      <h2 class="section-title">📣 SNS 마케팅 트렌드</h2>
+      <span class="section-count">3건</span>
+    </div>
+    <div class="card-grid">
+      <article class="card">
+        <span class="card-tag orange">SNS 마케팅</span>
+        <h3 class="card-title">2026년 치과 마케팅 핵심은 '다채널 전략'</h3>
+        <p class="card-body">네이버의 알고리즘 통제 강화로 블로그·플레이스 중심 마케팅이 한계에 봉착함에 따라 SNS·유튜브·의료 플랫폼을 병행하는 다채널 전략이 2026년 치과 마케팅의 핵심으로 부상했다.</p>
+        <div class="card-footer">
+          <span class="source-label">출처</span>
+          <a class="source-link" href="https://dentdots.co.kr/2026%EB%85%84-%EC%B9%98%EA%B3%BC-%EB%A7%88%EC%BC%80%ED%8C%85-%EC%9D%B4%EA%B2%83%EB%A7%8C-%EC%95%8C%EB%A9%B4-%EB%90%A9%EB%8B%88%EB%8B%A4/" target="_blank" rel="noopener">다츠애드 <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+        </div>
+      </article>
+      <article class="card">
+        <span class="card-tag orange">SNS 마케팅</span>
+        <h3 class="card-title">라이브 커머스, 2026년 치과 SNS 마케팅 핵심 트렌드로 부상</h3>
+        <p class="card-body">실시간 소통과 몰입감이 강점인 라이브 커머스가 2026년 한국 SNS 마케팅의 핵심 트렌드로 주목받으며 치과병원들도 라이브 방송을 통한 환자 교육 및 홍보 활용을 늘리고 있다.</p>
+        <div class="card-footer">
+          <span class="source-label">출처</span>
+          <a class="source-link" href="https://www.marketslab.net/boards/view.php?id=5679" target="_blank" rel="noopener">마케팅랩 <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+        </div>
+      </article>
+      <article class="card">
+        <span class="card-tag orange">SNS 마케팅</span>
+        <h3 class="card-title">치과 SNS 불법 의료광고 주의보…과장 표현 규제 강화</h3>
+        <p class="card-body">SNS·플랫폼 불법 의료광고가 급증하며 치과계에 주의가 요구된다. '100% 통증 해소' 등 절대적·확정적 표현이 포함된 SNS 홍보는 불법 의료광고로 제재 대상이 될 수 있다.</p>
+        <div class="card-footer">
+          <span class="source-label">출처</span>
+          <a class="source-link" href="https://www.dailydental.co.kr/news/article.html?no=127899" target="_blank" rel="noopener">치의신보 <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+        </div>
+      </article>
+    </div>
+  </section>
 </main>
-
 <footer>
   <span class="tooth">🦷</span>
-  매일 자동 업데이트 · 미르치과 뉴스 데일리
+  매일 자동 업데이트 · 치과 뉴스 데일리
 </footer>
-
 </body>
 </html>
