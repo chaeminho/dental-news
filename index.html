@@ -389,13 +389,15 @@ function renderSection(sec) {
       <span class="card-tag ${sec.color}">${esc(sec.key)}</span>
       <h3 class="card-title">${esc(item.title)}</h3>
       <p class="card-body">${esc(item.body)}</p>
+      ${item.sourceUrl ? `
       <div class="card-footer">
         <span class="source-label">출처</span>
-        ${item.sourceUrl
-          ? `<a class="source-link" href="${esc(item.sourceUrl)}" target="_blank" rel="noopener">${esc(item.sourceName)} ${EXT_ICON}</a>`
-          : `<span class="source-label">${esc(item.sourceName || '–')}</span>`
-        }
-      </div>
+        <a class="source-link" href="${esc(item.sourceUrl)}" target="_blank" rel="noopener">${esc(item.sourceName)} ${EXT_ICON}</a>
+      </div>` : (item.sourceName ? `
+      <div class="card-footer">
+        <span class="source-label">출처: ${esc(item.sourceName)}</span>
+      </div>` : '')
+      }
     </article>`).join('');
 
   return `
