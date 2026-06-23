@@ -109,5 +109,3 @@ html_parts = [
 with open('index.html', 'w', encoding='utf-8') as f:
     f.write(''.join(html_parts))
 print('index.html 생성 완료')
-print(f'총 기사 수: {len(articles)}개, 날짜 수: {len(dates_sorted)}개')
-print(f'최신 날짜: {latest_date}')
