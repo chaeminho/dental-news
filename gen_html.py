@@ -1,7 +1,7 @@
 import re, json
 with open('README.md', 'r', encoding='utf-8') as f:
     content = f.read()
-dpat = re.compile(r'## \U0001f4c5 (\d{4})년 (\d{1,2})월 (\d{1,2})일\n(.*?)(?=## \U0001f4c5 |\Z)', re.DOTALL)
+dpat = re.compile(r'^## \U0001f4c5 (\d{4})년 (\d{1,2})월 (\d{1,2})일\n(.*?)(?=^## \U0001f4c5 |^## \U0001f4c6 |\Z)', re.DOTALL | re.MULTILINE)
 SECS = [
     ('\U0001f9b7 치과 업계 뉴스', 'blue', '업계뉴스', '\U0001f9b7'),
     ('\U0001f4a1 치과 기술 트렌드', 'green', '기술트렌드', '\U0001f4a1'),
