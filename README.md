@@ -273,6 +273,30 @@
 
 ---
 
+## 📅 2026년 11월 21일
+
+### 🦷 치과 업계 뉴스
+- **경북대치과병원 장애인구강센터, 4년 연속 진료실적 1위**: 경북대치과병원 장애인구강센터가 4년 연속 진료실적 1위를 기록했다고 알려졌다. (출처: [치과신문](https://dentalnews.or.kr/index.html))
+- **SIDEX 2026 국제종합학술대회 최고 흥행 키워드 'AI'**: 5월 코엑스에서 열린 SIDEX 2026에서 AI 관련 세션이 가장 큰 관심을 모았다. (출처: [치과신문](https://dentalnews.or.kr/mobile/article.html?no=47450))
+- **2026년 치과 수가 2% 인상**: 요양급여비용 조정으로 치과 수가가 2% 오르고 치과의원 급여 임플란트 1치당 수가는 135만1,040원이 적용된다. (출처: [치과신문](https://www.dentalnews.or.kr/news/article.html?no=46229))
+
+### 💡 치과 기술 트렌드
+- **오스템임플란트, AI 전자차트·충치 분석 확대**: 음성 기록(STT)과 모션 감지 기능을 SIDEX 2026에서 시연했다. 업체 발표 기반이라 임상 효과는 별도 확인이 필요하다. (출처: [헬로티](https://www.hellot.net/mobile/article.html?no=113124))
+- **SIDEX 2026 'AI 필수시대' 치과 활용 방안**: AI 영상 진단, 3D 수술 시뮬레이션, 임플란트 수술 보조 로봇 등 진료 현장 적용 사례가 다뤄졌다. (출처: [치과신문](https://www.dentalnews.or.kr/mobile/article.html?no=47161))
+- **디지털 덴티스트리 구치부 치료 전략**: 디지털 워크플로우를 활용한 구치부 치료 전략이 공유됐다. (출처: [치과신문](https://www.dentalnews.or.kr/mobile/article.html?no=47624))
+
+### 🏥 건강보험 정책
+- **65세 이상 완전 무치악 임플란트 급여 적용**: 건정심이 9월 '건강보험 보장 1단계 혁신방안'을 의결해 2027년 1월부터 임플란트 2개가 지원될 예정이다. 세부 기준은 고시 확인이 필요하다. (출처: [치과신문](https://www.dentalnews.or.kr/mobile/article.html?no=48170))
+- **치과계 숙원 결실, 무치악 임플란트 급여**: 치협은 2016년부터 관련 안건이 25건 상정된 오랜 숙원사업이라고 평가했다. (출처: [데일리메디](https://www.dailymedi.com/dmedi/news/news_view.php?wr_id=940344))
+- **소아·청소년 광중합형 복합레진 급여 확대**: 대상 연령이 12세에서 13세로 확대되며 연 약 308억 원의 건보 재정이 투입될 것으로 예상된다. (출처: [치과신문](https://www.dentalnews.or.kr/mobile/article.html?no=48170))
+
+### 📣 SNS 마케팅 트렌드
+- **2026 치과 인스타그램 마케팅 가이드**: 결과물·교육 영상·비하인드 등 진정성 있는 콘텐츠를 꾸준히 올리는 치과가 신뢰를 얻는다는 해외 매체 분석이다. (출처: [Dentaltown](https://www.dentaltown.com/blog/post/24706/how-instagram-is-transforming-dental-marketing-in-2026-patient-growth-guide))
+- **치과 소셜미디어 마케팅 2026 가이드**: 모든 플랫폼보다 환자가 있는 곳에 집중하고 구글 비즈니스 프로필을 함께 관리하라고 권한다. (출처: [Sendible](https://sendible.com/insights/dental-social-media-marketing))
+- **병원 인스타그램은 상담 전 망설임에 맞춰 설계**: 감성보다 환자가 망설이는 지점을 해소하는 콘텐츠가 필요하다는 업계 칼럼이다. 국내 의료광고 심의 기준은 별도 확인이 필요하다. (출처: [아이보스](https://www.i-boss.co.kr/ab-6141-72057))
+
+---
+
 ## 📅 2026년 11월 20일
 
 ### 🦷 치과 업계 뉴스
